@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { url } from 'inspector';
 
 
 @Component({
@@ -10,5 +9,4 @@ import { url } from 'inspector';
 })
 export class AppComponent {
   title = 'portfolio';
-
 }

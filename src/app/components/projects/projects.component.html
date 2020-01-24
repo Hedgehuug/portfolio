@@ -1,0 +1,31 @@
+<div>
+    <mat-accordion multi="false">
+        <mat-expansion-panel class="expansion-panel" *ngFor="let project of makeProjects()" [ngStyle]="{'background': project.img,'background-size':'100% auto','clip-path':'0 0 0 0'}">
+            <mat-expansion-panel-header class="panel-header">
+                <mat-panel-title class="body_text">
+                    {{ project.title }}
+                </mat-panel-title>
+                <mat-panel-description class="subtitles">
+                    {{ project.description }}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+                <div fxLayout="row" id="expansionPanel">
+                    <div style="margin:5px">
+                        <mat-card style="height:auto;background-color: #2a363b;">
+                            <mat-card-title style="color:#F7F0F5;">
+                                Techniques Used
+                            </mat-card-title>
+                            <mat-list>
+                                <mat-list-item *ngFor="let skill of project.techniques">
+                                    <h3 class="techniques">{{skill}}</h3>
+                                </mat-list-item>
+                            </mat-list>
+                        </mat-card>
+                    </div>
+                    <div fxFlex></div>
+                </div>
+            </ng-template>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

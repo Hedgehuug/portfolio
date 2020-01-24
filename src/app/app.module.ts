@@ -8,12 +8,14 @@ import { MaterialImportModule } from './materialImport/material-import/material-
 import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MainPageComponent } from './components/main-page/main-page.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PopUpComponent,
-    MainPageComponent
+    MainPageComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
