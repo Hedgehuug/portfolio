@@ -3,20 +3,20 @@
         "description": "My first web designer portfolio",
         "link": "",
         "techniques": ["Agnular", "JSON Importing", "Agnular-Material", "Animations", "JSON"],
-        "img": "url(../../../assets/choices/project-photos/choice-6.jpg)"
+        "img": "url(./assets/choices/project-photos/choice-6.jpg)"
     },
     {
         "title": "Trading Bot",
         "description": "Binance trading bot and backtest environment",
         "link": "",
         "techniques": ["Python", "API processing", "Data Analysis"],
-        "img": "url(../../../assets/choices/project-photos/choice-1.jpg)"
+        "img": "url(./assets/choices/project-photos/choice-1.jpg)"
     },
     {
         "title": "Trading Journal",
         "description": "An ongoing personal project which lead me down the web development path",
         "link": "",
         "techniques": ["Agnular", "Agnular-Material", "rxjs Observables", "Google Firestore", "materialize.css"],
-        "img": "url(../../../assets/choices/project-photos/choice-3.jpg)"
+        "img": "url(./assets/choices/project-photos/choice-3.jpg)"
     }
 ]
