@@ -19,7 +19,8 @@ export class ProjectsComponent implements OnInit {
     
   }
   public makeProjects(){
-    this.projectsList = data.default;
+    this.projectsList = data["default"];
+    
     return this.projectsList;
     }
   

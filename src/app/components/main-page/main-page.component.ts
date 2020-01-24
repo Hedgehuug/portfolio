@@ -46,7 +46,6 @@ export class MainPageComponent implements OnInit {
         this.isPhone = false;
       }
     })
-    console.log(this.skillsList);
     
 
   }
