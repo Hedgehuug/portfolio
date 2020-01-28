@@ -16,7 +16,7 @@
         "title": "Trading Journal",
         "description": "An ongoing personal project which lead me down the web development path",
         "link": "",
-        "techniques": ["Agnular", "Agnular-Material", "rxjs Observables", "Google Firestore", "materialize.css"],
+        "techniques": ["Angular", "Agnular-Material", "rxjs Observables", "Google Firestore", "materialize.css"],
         "img": "url(./assets/choices/project-photos/choice-3.jpg)"
     }
 ]

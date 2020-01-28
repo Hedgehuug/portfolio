@@ -1,9 +1,18 @@
 <!--Hero Section-->
-<div [ngStyle]="{background: 'url(./assets/choices/choice_5.jpg)','background-size': isPhone? 'auto 100%' : '100vh auto'}" style="background-repeat: no-repeat;background-attachment: fixed;" id="main_body">
-    <div style="height:98vh;width:100%;text-align:center;">
-        <img class="corner-icons" src="./assets/Imported_Components/icons8/file.png">
+<div [ngStyle]="{background: 'url(./assets/choices/choice_5.jpg)','background-size': isPhone? 'auto 100%' : '100% auto','background-attachment': isPhone? 'absolute' : 'fixed'}" style="background-repeat: no-repeat;" id="main_body" (change)="makePhone()">
+    <div style="height:100vh;width:100%;">
+        <div fxLayout="row">
+            <div fxFlex></div>
+            <mat-card style="padding:10px;margin:15px;background: linear-gradient(to bottom right,#6c5b7b,#bc7fad);">
+                <div fxLayout="row">
+                    <img class="corner-icons" src="./assets/Imported_Components/icons8/bigGithub.svg">
+                    <div fxFlex></div>
+                    <img class="corner-icons" src="./assets/Imported_Components/icons8/bigFile.svg">
+                </div>
+            </mat-card>
+        </div>
         <div fxLayout="row" fxLayoutAlign='center'>
-            <h1 style="margin: 45vh 0 0 0; font-size:4.5rem;color:white;" class="mat-h1">
+            <h1 style="margin: 40vh 0 0 0; font-size:4.5rem;color:white;" class="mat-h1">
                 Hi! I'm Ben.
             </h1>
         </div>

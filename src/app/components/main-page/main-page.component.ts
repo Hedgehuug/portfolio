@@ -1,3 +1,4 @@
+import { BreakpointsService } from './../../services/breakpoints.service';
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, BreakpointState, Breakpoints } from '@angular/cdk/layout';
 import { skills } from './../models/skills'
@@ -8,16 +9,12 @@ import { skills } from './../models/skills'
   styleUrls: ['./main-page.component.sass']
 })
 export class MainPageComponent implements OnInit {
-  bpList = [
-    Breakpoints.HandsetPortrait,
-    Breakpoints.TabletPortrait,
-    Breakpoints.WebPortrait]
-  isPhone: boolean;
   skillsList: skills[];
+  isPhone: boolean;
 
   
   
-  constructor(public bo: BreakpointObserver) {
+  constructor(public bo: BreakpointObserver, public bs: BreakpointsService) {
     this.skillsList = [
       {name:'Angular',source:"./assets/Imported_Components/icons8/angular.png"},
       {name:'JavaScript',source:"./assets/Imported_Components/icons8/js.png"},
@@ -28,26 +25,17 @@ export class MainPageComponent implements OnInit {
       {name:'Photoshop',source:"./assets/Imported_Components/icons8/photoshop.png"},
       {name:'Github',source:"./assets/Imported_Components/icons8/github.png"}
     ]
-    if (this.bo.isMatched(this.bpList)) {
-        this.isPhone = true;
-      }
-      else {
-        this.isPhone = false;
-      }
     }
     
     ngOnInit() {
-    this.bo.observe(this.bpList)
-      .subscribe((state: BreakpointState) => {
-      if (state.matches) {
-        this.isPhone = true;
-      } 
-      else {
-        this.isPhone = false;
-      }
-    })
+      this.makePhone();
+    }
     
-
+    public makePhone(){
+      this.bs.getBreakpoints()
+      .subscribe((state: BreakpointState) => {
+        this.isPhone = this.bs.getMatch(state);
+      })
   }
 
 }

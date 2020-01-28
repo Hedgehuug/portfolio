@@ -1,7 +1,8 @@
+import { BreakpointState } from '@angular/cdk/layout';
+import { BreakpointsService } from './../../services/breakpoints.service';
 import { projects } from './../models/projects';
 import { Component, OnInit } from '@angular/core';
 import * as data from './../../projects.json';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-projects',
@@ -10,17 +11,27 @@ import { Observable } from 'rxjs';
 })
 export class ProjectsComponent implements OnInit {
   projectsList: projects[];
+  isPhone: boolean;
 
-  constructor() {
+  constructor(public bs: BreakpointsService) {
   }
 
   ngOnInit() {
     console.log(this.makeProjects());
+    this.makePhone;
+    console.log(this.isPhone);
     
   }
+
+  private makePhone(){
+    this.bs.getBreakpoints()
+    .subscribe((state: BreakpointState) => {
+      this.isPhone = this.bs.getMatch(state);
+    })
+}
+
   public makeProjects(){
     this.projectsList = data["default"];
-    
     return this.projectsList;
     }
   

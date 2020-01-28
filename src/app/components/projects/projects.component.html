@@ -1,6 +1,6 @@
 <div>
     <mat-accordion multi="false">
-        <mat-expansion-panel class="expansion-panel" *ngFor="let project of makeProjects()" [ngStyle]="{'background': project.img,'background-size':'100% auto','clip-path':'0 0 0 0'}">
+        <mat-expansion-panel class="expansion-panel" *ngFor="let project of makeProjects()" [ngStyle]="{'background': project.img,'background-size': isPhone? 'auto 100%' : '100% auto'}">
             <mat-expansion-panel-header class="panel-header">
                 <mat-panel-title class="body_text">
                     {{ project.title }}
@@ -18,7 +18,7 @@
                             </mat-card-title>
                             <mat-list>
                                 <mat-list-item *ngFor="let skill of project.techniques">
-                                    <h3 class="techniques">{{skill}}</h3>
+                                    <h3 class="techniques">{{ skill }}</h3>
                                 </mat-list-item>
                             </mat-list>
                         </mat-card>
