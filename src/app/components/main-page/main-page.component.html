@@ -1,18 +1,18 @@
 <!--Hero Section-->
-<div [ngStyle]="{background: 'url(./assets/choices/choice_5.jpg)','background-size': isPhone? 'auto 100%' : '100% auto','background-attachment': isPhone? 'absolute' : 'fixed'}" style="background-repeat: no-repeat;" id="main_body" (change)="makePhone()">
+<div [ngStyle]="{background: 'url(./assets/choices/choice_5.jpg)','background-size': isPhone? '100% 100%' : '100% auto','background-attachment': isPhone? 'absolute' : 'fixed','background-repeat': 'no-repeat'}" id="main_body">
     <div style="height:100vh;width:100%;">
         <div fxLayout="row">
             <div fxFlex></div>
-            <mat-card style="padding:10px;margin:15px;background: linear-gradient(to bottom right,#6c5b7b,#bc7fad);">
+            <mat-card style="padding:10px;max-width:110px;margin:15px;background: linear-gradient(to bottom right,#6c5b7b,#bc7fad);">
                 <div fxLayout="row">
-                    <img class="corner-icons" src="./assets/Imported_Components/icons8/bigGithub.svg">
+                    <img class="corner-icons" src="./assets/Imported_Components/icons8/bigGithub.svg" (click)="openGithub()">
                     <div fxFlex></div>
-                    <img class="corner-icons" src="./assets/Imported_Components/icons8/bigFile.svg">
+                    <img class="corner-icons" src="./assets/Imported_Components/icons8/bigFile.svg" (click)="openResume()">
                 </div>
             </mat-card>
         </div>
         <div fxLayout="row" fxLayoutAlign='center'>
-            <h1 style="margin: 40vh 0 0 0; font-size:4.5rem;color:white;" class="mat-h1">
+            <h1 style="margin: 35vh 0 0 0; font-size:4.5rem;color:white;" class="mat-h1">
                 Hi! I'm Ben.
             </h1>
         </div>
@@ -30,10 +30,10 @@
         <div fxLayoutAlign="center" style="padding:3rem 20% 4rem 20%">
             <p class="mat-body-1 body_text">
                 I have been writing code as a passion for 4 years, I am a self-taught Web Developer with an affinity for efficiency and clean design. I started web development in 2019 and picked up Angular as my preferred framework. I love playing with technology, exploring
-                and discovering its possibilities </p>
+                and discovering its possibilities. </p>
         </div>
     </mat-card>
-    <div style="height:10rem;width: 100%;"></div>
+    <div class="gaps"></div>
 
     <!--Skill Section-->
     <div>
@@ -50,11 +50,10 @@
             </div>
         </mat-card>
     </div>
-    <div style="height:10rem"></div>
+    <div class="gaps"></div>
 
     <!--Personal Projects Section-->
     <div>
-        <div class="white-decor mat-elevation-z4"></div>
         <div fxLayoutAlign="center">
             <h1 class="section_title mat-h1">Projects</h1>
         </div>

@@ -12,6 +12,7 @@ export class MainPageComponent implements OnInit {
   skillsList: skills[];
   isPhone: boolean;
 
+
   
   
   constructor(public bo: BreakpointObserver, public bs: BreakpointsService) {
@@ -36,6 +37,12 @@ export class MainPageComponent implements OnInit {
       .subscribe((state: BreakpointState) => {
         this.isPhone = this.bs.getMatch(state);
       })
-  }
+    }
+    public openResume(){
+      window.open('./assets/Resume.pdf','_blank');
+    }
+    public openGithub(){
+      window.open('https://github.com/Hedgehuug','_blank')
+    }
 
 }

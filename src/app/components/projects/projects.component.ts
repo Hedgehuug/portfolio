@@ -12,21 +12,24 @@ import * as data from './../../projects.json';
 export class ProjectsComponent implements OnInit {
   projectsList: projects[];
   isPhone: boolean;
+  viewType: String;
 
   constructor(public bs: BreakpointsService) {
+    this.viewType = 'blank-project-state'
   }
 
   ngOnInit() {
     console.log(this.makeProjects());
-    this.makePhone;
+    this.makePhone();
     console.log(this.isPhone);
     
   }
 
-  private makePhone(){
+  public makePhone(){
     this.bs.getBreakpoints()
     .subscribe((state: BreakpointState) => {
       this.isPhone = this.bs.getMatch(state);
+      return this.isPhone
     })
 }
 
@@ -34,6 +37,16 @@ export class ProjectsComponent implements OnInit {
     this.projectsList = data["default"];
     return this.projectsList;
     }
+  
+  public openedPortrait(){
+    if (this.isPhone) {
+      this.viewType = 'opened-portrait-state'
+    }
+    console.log(this.viewType);
+    
+
+  }
+    
   
 
 }

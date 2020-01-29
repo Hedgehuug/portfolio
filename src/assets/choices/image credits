@@ -48,5 +48,8 @@ project choice-6
 old blue:
     #124E78
 
+[ngStyle]="{background: 'url(./assets/choices/choice_5.jpg)','background-size': isPhone? 'auto 100%' : '100% auto','background-attachment': isPhone? 'absolute' : 'fixed'}" style="background-repeat: no-repeat;" id="main_body" (change)="makePhone()"
+
+
 Icons by Icons8
     <a target="_blank" href="https://icons8.com/icons/set/html-5">Html 5</a>, <a target="_blank" href="https://icons8.com/icons/set/css3">CSS3</a> and other icons by <a target="_blank" href="https://icons8.com">Icons8</a>

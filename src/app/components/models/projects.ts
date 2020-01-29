@@ -4,4 +4,5 @@ export interface projects{
     link: String;
     techniques: [];
     img: String;
+    expDescription: String;
 }

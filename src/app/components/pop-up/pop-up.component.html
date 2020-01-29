@@ -1,6 +1,0 @@
-<div style="cursor: pointer; margin:auto;" (click)='transitionOver()' [@openClose]="isOpen ? 'open' : 'close'" class="open-close-container">
-    <h1 style="margin:auto;">{{ isOpen ? 'open' : 'close'}}</h1>
-</div>
-<div [@myInsertRemoveTrigger] *ngIf="isShown" class="insert-remove-container">
-    <p>The box is inserted</p>
-</div>
