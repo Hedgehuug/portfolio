@@ -15,10 +15,10 @@ export class ProjectsComponent implements OnInit {
   viewType: String;
 
   constructor(public bs: BreakpointsService) {
-    this.viewType = 'blank-project-state'
   }
-
+  
   ngOnInit() {
+    this.viewType = 'blank-project-state'
     this.makePhone();
     
   }
