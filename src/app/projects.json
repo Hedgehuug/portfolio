@@ -4,7 +4,8 @@
         "link": "",
         "techniques": ["Agnular", "JSON Importing", "Agnular-Material", "JSON"],
         "img": "url(./assets/choices/project-photos/choice-6.jpg)",
-        "expDescription": "My first web designer portfolio. I learned a lot from making it, I got to practice color-theory, proper layouts, JSON files, and hosting with github. "
+        "expDescription": "My first web designer portfolio. I learned a lot from making it, I got to practice color-theory, proper layouts, JSON files, and hosting with github.",
+        "reference": ["Photo by Anas Alshanti on Unsplash", "https://unsplash.com/@otenteko"]
     },
     {
         "title": "Trading Bot",
@@ -12,7 +13,8 @@
         "link": "",
         "techniques": ["Python", "Pandas", "API processing", "Data Analysis"],
         "img": "url(./assets/choices/project-photos/choice-1.jpg)",
-        "expDescription": "Binance trading bot and backtest environment. This project so far includes a basic moving-average strategy and a backtest environment, it was written in python using Pandas for data-analysis."
+        "expDescription": "Binance trading bot and backtest environment. This project so far includes a basic moving-average strategy and a backtest environment, it was written in python using Pandas for data-analysis.",
+        "reference": ["Photo by Shahadat Rahman on Unsplash", "https://unsplash.com/@hishahadat"]
     },
     {
         "title": "Trading Journal",
@@ -20,6 +22,7 @@
         "link": "",
         "techniques": ["Angular", "Agnular-Material", "rxjs", "Google Firestore", "materialize.css"],
         "img": "url(./assets/choices/project-photos/choice-3.jpg)",
-        "expDescription": "An ongoing personal project which lead me down the web development path. This project is what made me start web development, and I have learned extensive amounts during the making of it. It made me step far out of my comfort zone and challenge myself with tech I have never touched before."
+        "expDescription": "An ongoing personal project which lead me down the web development path. This project is what made me start web development, and I have learned extensive amounts during the making of it. It made me step far out of my comfort zone and challenge myself with tech I have never touched before.",
+        "reference": ["Photo by Dariusz Sankowski on Unsplash", "https://unsplash.com/@dariuszsankowski"]
     }
 ]

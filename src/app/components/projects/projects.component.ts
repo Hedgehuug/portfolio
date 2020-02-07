@@ -19,9 +19,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.makeProjects());
     this.makePhone();
-    console.log(this.isPhone);
     
   }
 

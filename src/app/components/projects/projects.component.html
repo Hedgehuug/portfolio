@@ -1,6 +1,6 @@
 <div>
     <mat-accordion multi="false">
-        <mat-expansion-panel *ngFor="let project of makeProjects()" [ngStyle]="{'background': project.img}" (opened)="openedPortrait()" [ngClass]="viewType">
+        <mat-expansion-panel *ngFor="let project of makeProjects()" [ngStyle]="{'background': project.img, 'background-size':'100% auto'}" (opened)="openedPortrait()" [ngClass]="viewType">
             <mat-expansion-panel-header class="panel-header">
                 <mat-panel-title class="body_text">
                     {{ project.title }}
@@ -13,7 +13,7 @@
 
             <ng-template matExpansionPanelContent>
                 <div fxLayout.xs="column" id="expansionPanel">
-                    <div fxFlex.xs="100" style="margin:5px">
+                    <div fxFlex.xs="100" fxFlex="none" style="margin:5px">
                         <mat-card style="height:auto;background-color: #2a363b;">
                             <mat-card-title>
                                 Techniques Used
@@ -25,19 +25,28 @@
                             </mat-list>
                         </mat-card>
                     </div>
-                    <div fxFlex fxFlex.xs="100" style="margin:5px">
-                        <mat-card style="background-color: #2a363b;">
-                            <mat-card-title>
-                                Description
-                            </mat-card-title>
+                    <div fxLayout="column">
+                        <div fxFlex fxFlex.xs="100" style="margin:5px">
+                            <mat-card style="background-color: #2a363b;">
+                                <mat-card-title>
+                                    Description
+                                </mat-card-title>
+                                <div>
+                                    <p class="projectText">
+                                        {{ project.expDescription }}
+                                    </p>
+                                </div>
+                            </mat-card>
+                        </div>
+                        <div>
+                            <div fxFlex></div>
                             <div>
-                                <p class="projectText">
-                                    {{ project.expDescription }}
-                                </p>
+                                <a class="subtitles artist-link" target="_blank" href="{{ project.reference[1] }}">
+                                   {{ project.reference[0] }}
+                                </a>
                             </div>
-                        </mat-card>
+                        </div>
                     </div>
-
                 </div>
             </ng-template>
         </mat-expansion-panel>

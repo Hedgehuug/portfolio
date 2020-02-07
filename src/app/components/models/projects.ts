@@ -5,4 +5,5 @@ export interface projects{
     techniques: [];
     img: String;
     expDescription: String;
+    reference: [];
 }
