@@ -1,6 +1,6 @@
 <div>
     <mat-accordion multi="false">
-        <mat-expansion-panel *ngFor="let project of makeProjects()" [ngStyle]="{'background': project.img}" (opened)="openedPortrait()" [ngClass]="viewType">
+        <mat-expansion-panel *ngFor="let project of makeProjects()" [ngStyle]="{'background': project.img, 'background-size':'100% auto'}" (opened)="openedPortrait()" [ngClass]="viewType">
             <mat-expansion-panel-header class="panel-header">
                 <mat-panel-title class="body_text">
                     {{ project.title }}

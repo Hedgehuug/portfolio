@@ -1,18 +1,26 @@
 <!--Hero Section-->
-<img style="position: fixed; z-index: -5;" src="./assets/choices/choice_5.jpg" fxFlexFill>
-
+<div id="background-div">
+    <img src="./assets/choices/choice_5.jpg" fxFlexFill>
+</div>
 <!--[ngStyle]="{background: 'url(./assets/choices/choice_5.jpg)','background-size': isPhone? '100% 100%' : '100% auto','background-attachment': isPhone? 'absolute' : 'fixed','background-repeat': 'no-repeat'}" -->
 <div id="main_body">
     <div style="height:100vh;width:100%;">
         <div fxLayout="row">
             <div fxFlex></div>
-            <mat-card style="padding:10px;max-width:110px;margin:15px;background: linear-gradient(to bottom right,#6c5b7b,#bc7fad);">
-                <div fxLayout="row">
-                    <img class="corner-icons" src="./assets/Imported_Components/icons8/bigGithub.svg" (click)="openGithub()">
-                    <div fxFlex></div>
-                    <img class="corner-icons" src="./assets/Imported_Components/icons8/bigFile.svg" (click)="openResume()">
-                </div>
-            </mat-card>
+            <div fxLayout="column">
+                <mat-card style="padding:10px;max-width:140px;margin:15px;background: linear-gradient(to bottom right,#6c5b7b,#bc7fad);">
+                    <div fxLayout="row">
+                        <button mat-button fxFlex class="corner-buttons">
+                                <img class="corner-icons" src="./assets/Imported_Components/icons8/bigGithub.svg" (click)="openGithub()">
+                        </button>
+                        <div></div>
+                        <button mat-button fxFlex class="corner-buttons">
+                            <img class="corner-icons" src="./assets/Imported_Components/icons8/bigFile.svg" (click)="openResume()">
+                        </button>
+                    </div>
+                </mat-card>
+                <div fxFlex></div>
+            </div>
         </div>
         <div fxLayoutAlign='center'>
             <h1 style="margin: 35vh 0 0 0; font-size:4.5rem;color:white;" class="mat-h1">
@@ -74,12 +82,14 @@
                 <p class="mat-body-1 footer-text">+31 6 5887 5727<br/>bendeguz.w@gmail.com</p>
             </div>
             <mat-divider></mat-divider>
-            <a target="_blank" href="https://icons8.com" class="footer-links">
-                <p style="cursor:pointer" class="mat-body-1 footer-text-top">Icons from Icons8</p>
-            </a>
-            <a target="_blank" href="https://unsplash.com/@pawel_czerwinski" class="footer-links">
-                <p style="cursor:pointer" class="mat-body-1 footer-text-top">Background by Paweł Czerwiński on Unsplash</p>
-            </a>
+            <div style="margin: 20px 0 0 0">
+                <a target="_blank" href="https://icons8.com" class="footer-links">
+                    <p style="cursor:pointer" class="mat-body-1 footer-text-top">Icons from Icons8</p>
+                </a>
+                <a target="_blank" href="https://unsplash.com/@pawel_czerwinski" class="footer-links">
+                    <p style="cursor:pointer" class="mat-body-1 footer-text-top">Background by Paweł Czerwiński on Unsplash</p>
+                </a>
+            </div>
         </div>
     </div>
 </div>
