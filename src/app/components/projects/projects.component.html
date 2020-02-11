@@ -14,7 +14,7 @@
             <ng-template matExpansionPanelContent>
                 <div fxLayout.xs="column" id="expansionPanel">
                     <div fxFlex.xs="100" fxFlex="none" style="margin:5px">
-                        <mat-card style="height:auto;background-color: #2a363b;">
+                        <mat-card class="dark-bg" style="height:auto;">
                             <mat-card-title>
                                 Techniques Used
                             </mat-card-title>
@@ -26,8 +26,8 @@
                         </mat-card>
                     </div>
                     <div fxLayout="column">
-                        <div fxFlex fxFlex.xs="100" style="margin:5px">
-                            <mat-card style="background-color: #2a363b;">
+                        <div fxLayout="column" fxLayoutGap="0.5rem" fxFlex fxFlex.xs="100" style="margin:5px">
+                            <mat-card class="dark-bg">
                                 <mat-card-title>
                                     Description
                                 </mat-card-title>
@@ -37,6 +37,15 @@
                                     </p>
                                 </div>
                             </mat-card>
+                            <div fxLayout="row">
+                                <div fxFlex></div>
+                                <button mat-raised-button id="link-button">
+                                <a class="projectText" target="_blank" href="{{ project.link[1] }}" style="text-decoration: none;">
+                                        {{ project.link[0] }}
+                                    </a>
+                                </button>
+                            </div>
+                            <div fxFlex></div>
                         </div>
                         <div>
                             <div fxFlex></div>
